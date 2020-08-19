@@ -1,0 +1,18 @@
+{
+  "board1": {
+    "name": "guitars",
+    "ownedBy": "OfX8Mq06SJS8FekvVRfL7DJpYjx1"
+  },
+  "board2": {
+    "name": "vinyl",
+    "ownedBy": "OfX8Mq06SJS8FekvVRfL7DJpYjx1"
+  },
+  "board3": {
+    "name": "laptops",
+    "ownedBy": "2454363456"
+  },
+  "board4": {
+    "name": "cameras",
+    "ownedBy": "472572457"
+  }
+}
