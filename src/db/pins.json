@@ -1,0 +1,50 @@
+{
+  "pin1": {
+    "title": "Fender Stratocaster",
+    "url": "https://reverb.com/item/27488849-fender-stratocaster-solid-body-electric-guitar-1964-ser-l53729-original-black-tolex-hard-shell-case",
+    "image": "https://images.reverb.com/image/upload/s--OWMunNik--/t_card-square/v1567283550/jwodorh8n6ihaws34ltg.jpg",
+    "boardId": "board1"
+  },
+  "pin2": {
+    "title": "Gretsch G6620T",
+    "url": "https://guitar.com/review/electric-guitar/gretsch-g6620t-players-edition-nashville-center-block-double-cut/",
+    "image": "https://guitar.com/wp-content/uploads/2019/03/Gretsch-G6620T-Players-Edition-hero@1400x1050-1392x1043.jpg",
+    "boardId": "board1"
+  },
+  "pin3": {
+    "title": "Gibson Les Paul",
+    "url": "https://reverb.com/item/34033867-gibson-les-paul-traditional-blueberry-burst",
+    "image": "https://images.reverb.com/image/upload/s--7FS_rYfv--/f_auto,t_large/v1591208901/bkbsifw59ongfn0sstxn.jpg",
+    "boardId": "board1"
+  },
+  "pin4": {
+    "title": "Fender Vintera Jazzmaster",
+    "url": "https://www.sweetwater.com/store/detail/JazzV60MP3SB--fender-vintera-60s-jazzmaster-modified-3-color-sunburst",
+    "image": "https://media.sweetwater.com/api/i/q-82__ha-f7ee7d3f6158117e__hmac-9073cd8072ba8dd84621e9ba72cf0b39125f3f2f/images/items/750/JazzV60MP3SB-large.jpg",
+    "boardId": "board1"
+  },
+  "pin5": {
+    "title": "Songs From The Big Chair",
+    "url": "https://en.wikipedia.org/wiki/Songs_from_the_Big_Chair",
+    "image": "https://upload.wikimedia.org/wikipedia/en/f/f5/Tears_for_Fears_Songs_from_the_Big_Chair.jpg",
+    "boardId": "board2"
+  },
+  "pin6": {
+    "title": "Pet Sounds",
+    "url": "https://en.wikipedia.org/wiki/Pet_Sounds",
+    "image": "https://upload.wikimedia.org/wikipedia/en/b/bb/PetSoundsCover.jpg",
+    "boardId": "board2"
+  },
+  "pin7": {
+    "title": "Dark Side of the Moon",
+    "url": "https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon",
+    "image": "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png",
+    "boardId": "board2"
+  },
+  "pin8": {
+    "title": "Blue",
+    "url": "https://en.wikipedia.org/wiki/Blue_(Joni_Mitchell_album)",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e1/Bluealbumcover.jpg",
+    "boardId": "board2"
+  }
+}
