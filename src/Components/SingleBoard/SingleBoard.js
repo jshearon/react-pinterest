@@ -49,8 +49,8 @@ class SingleBoard extends React.Component {
     return (
       <div>
         <h4>{board.name}</h4>
-        <button className="btn btn-danger" onClick={() => { setSingleBoard(''); }}>X</button>
-          <div className="d-flex justify-content-center flex-wrap">
+        <button className="btn btn-danger" onClick={() => { setSingleBoard(''); }}>Back</button>
+          <div className="card-columns">
             {pinCards}
           </div>
       </div>

@@ -21,7 +21,7 @@ class Pin extends React.Component {
     const { pin } = this.props;
 
     return (
-      <div className="card text-center pins m-3">
+      <div className="card text-center pins mx-3 h-100">
         <div className="card-header"><h5>{pin.title}</h5></div>
         <div className="card-body">
           <img src={pin.image} alt={pin.title} />
