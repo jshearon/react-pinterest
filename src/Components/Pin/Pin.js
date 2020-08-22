@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Pin.scss';
+
 import pinShape from '../../helpers/propz/pinShape';
 
 class Pin extends React.Component {
@@ -19,7 +21,7 @@ class Pin extends React.Component {
     const { pin } = this.props;
 
     return (
-      <div className="card text-center">
+      <div className="card text-center pins m-3">
         <div className="card-header"><h5>{pin.title}</h5></div>
         <div className="card-body">
           <img src={pin.image} alt={pin.title} />

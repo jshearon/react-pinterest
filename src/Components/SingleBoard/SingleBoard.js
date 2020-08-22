@@ -50,7 +50,9 @@ class SingleBoard extends React.Component {
       <div>
         <h4>{board.name}</h4>
         <button className="btn btn-danger" onClick={() => { setSingleBoard(''); }}>X</button>
-          {pinCards}
+          <div className="d-flex justify-content-center flex-wrap">
+            {pinCards}
+          </div>
       </div>
     );
   }
