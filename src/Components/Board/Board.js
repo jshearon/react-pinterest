@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import boardShape from '../../helpers/propz/propz';
+import boardShape from '../../helpers/propz/boardShape';
 
 class Board extends React.Component {
   static propTypes = {
