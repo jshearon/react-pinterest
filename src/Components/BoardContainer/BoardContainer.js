@@ -6,6 +6,7 @@ import Board from '../Board/Board';
 import authData from '../../helpers/data/authData';
 import boardsData from '../../helpers/data/boardsData';
 import pinsData from '../../helpers/data/pinsData';
+import BoardForm from '../BoardForm/BoardForm';
 
 class BoardContainer extends React.Component {
   static propTypes = {
@@ -14,6 +15,7 @@ class BoardContainer extends React.Component {
 
   state = {
     boards: [],
+    formOpen: false,
   }
 
   getAllBoards = () => {
@@ -40,15 +42,28 @@ class BoardContainer extends React.Component {
       .catch((err) => console.error(err));
   }
 
+  createBoard = (newBoard) => {
+    boardsData.createBoard(newBoard)
+      .then(() => {
+        this.getAllBoards();
+        this.setState({ formOpen: false });
+      })
+      .catch((err) => console.error(err));
+  }
+
   render() {
-    const { boards } = this.state;
+    const { boards, formOpen } = this.state;
     const { setSingleBoard } = this.props;
 
     const boardCard = boards.map((board) => <Board key={board.id} board={board} setSingleBoard={setSingleBoard} deleteBoardWithPins={this.deleteBoardWithPins} />);
 
     return (
-      <div className="card-columns mx-auto">
-        {boardCard}
+      <div>
+        <button className="btn btn-primary" onClick={() => { this.setState({ formOpen: !formOpen }); }}>Show Form</button>
+          {formOpen ? <BoardForm createBoard={this.createBoard}/> : ''}
+        <div className="card-columns mx-auto">
+          {boardCard}
+        </div>
       </div>
     );
   }
