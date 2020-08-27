@@ -51,11 +51,15 @@ class SingleBoard extends React.Component {
       .catch((err) => console.error(err));
   }
 
+  editPin = (pinToEdit) => {
+    console.error(pinToEdit);
+  }
+
   render() {
     const { board, pins, formOpen } = this.state;
     const { setSingleBoard, boardId } = this.props;
 
-    const pinCards = pins.map((pin) => <Pin key={pin.id} pin={pin} deletePin={this.deletePin}/>);
+    const pinCards = pins.map((pin) => <Pin key={pin.id} pin={pin} deletePin={this.deletePin} editPin={this.editPin} />);
 
     return (
       <div>
