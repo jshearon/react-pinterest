@@ -16,6 +16,7 @@ class BoardContainer extends React.Component {
   state = {
     boards: [],
     formOpen: false,
+    editBoard: {},
   }
 
   getAllBoards = () => {
@@ -51,16 +52,29 @@ class BoardContainer extends React.Component {
       .catch((err) => console.error(err));
   }
 
+  editABoard = (boardToEdit) => {
+    this.setState({ formOpen: true, editBoard: boardToEdit });
+  }
+
+  updateBoard = (boardId, editedBoard) => {
+    boardsData.updateBoard(boardId, editedBoard)
+      .then(() => {
+        this.getAllBoards();
+        this.setState({ formOpen: false, editBoard: {} });
+      })
+      .catch((err) => console.error('Update Board Borked', err));
+  }
+
   render() {
-    const { boards, formOpen } = this.state;
+    const { boards, formOpen, editBoard } = this.state;
     const { setSingleBoard } = this.props;
 
-    const boardCard = boards.map((board) => <Board key={board.id} board={board} setSingleBoard={setSingleBoard} deleteBoardWithPins={this.deleteBoardWithPins} />);
+    const boardCard = boards.map((board) => <Board key={board.id} board={board} setSingleBoard={setSingleBoard} deleteBoardWithPins={this.deleteBoardWithPins} editABoard={this.editABoard} />);
 
     return (
       <div>
         <button className="btn btn-primary" onClick={() => { this.setState({ formOpen: !formOpen }); }}>Show Form</button>
-          {formOpen ? <BoardForm createBoard={this.createBoard}/> : ''}
+          {formOpen ? <BoardForm createBoard={this.createBoard} boardThatIAmEditing={editBoard} updateBoard={this.updateBoard}/> : ''}
         <div className="card-columns mx-auto">
           {boardCard}
         </div>
